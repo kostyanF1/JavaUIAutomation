@@ -1,4 +1,4 @@
-package com.geekbrains.leson3;
+package com.geekbrains.lesson3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,11 +1,9 @@
-package com.geekbrains.leson3;
 package com.geekbrains.lesson3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -14,7 +12,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class CrmTest {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main (String[] args) throws InterruptedException {
         WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -42,14 +40,15 @@ public class CrmTest {
 
         driver.findElement(By.xpath("//input[contains(@id, 'datePlan') and @placeholder='Укажите дату']")).click();
         driver.findElement(By.xpath("//a[.='21']")).click();
-        driver.findElement(By.xpath("//input[contains(@id, 'crm_expense_request_sumPlan-uid')]")).sendKeys("100");
+        driver.findElement
+                (By.xpath("//input[contains(@id, 'crm_expense_request_sumPlan-uid')]")).sendKeys("100");
 
         driver.findElement(By.xpath("//button[contains(., 'Сохранить и закрыть')]")).click();
         Thread.sleep(5000);
         driver.quit();
     }
 
-    static void login(WebDriver driver) {
+    static void login (WebDriver driver) {
         WebElement element = driver.findElement(By.id("prependedInput"));
         element.sendKeys("Applanatest1");
         driver.findElement(By.id("prependedInput2")).sendKeys("Student2020!");
