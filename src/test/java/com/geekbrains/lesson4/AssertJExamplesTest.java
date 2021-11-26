@@ -1,6 +1,5 @@
 package com.geekbrains.lesson4;
 
-import com.geekbrains.lesson3.lesson4.Functions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.geekbrains.lesson3.lesson4;
+package com.geekbrains.lesson4;
 
 public class Box {
     private Integer ballsCount;
